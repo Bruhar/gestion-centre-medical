@@ -1,0 +1,60 @@
+# Ignore Composer dependencies
+/vendor/
+
+# Ignore Drupal's core files (handled by Composer)
+!/web
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+
+# Ignore Drupal file system (user uploads, config exports if not needed)
+/web/sites/*/files/
+/web/sites/*/private/
+/web/sites/*/translations/
+
+# Allow custom modules and themes
+!/web/modules/custom/
+/web/modules/custom/**/node_modules/
+/web/modules/custom/**/vendor/
+/web/modules/custom/**/.DS_Store
+!/web/themes/custom/
+/web/themes/custom/**/node_modules/
+/web/themes/custom/**/vendor/
+
+# Ignore site-specific settings
+/web/sites/*/settings*.php
+/web/sites/*/services.yml
+
+# Ignore sync directory (optional: track it only if config management is used)
+# /config/sync/
+
+# Ignore temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+
+# Ignore DDEV environment
+.ddev/.dbinfo
+.ddev/.importdb
+.ddev/nfs_mount_enabled
+.ddev/.webimageBuild
+.ddev/.webimageExtra
+.ddev/.downloads
+.ddev/sequelpro.spf
+.ddev/router-compose.yaml
+.ddev/docker-compose.*
+.ddev/commands/web/.gitkeep
+
+# Optional: ignore everything in .ddev
+# Comment this out if you want to track shared DDEV config
+# /.ddev/
+
+# Ignore OS/system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.code-workspace
