@@ -80,18 +80,36 @@ This project is a Drupal 11-based web application for managing a medical center.
 
 ## Useful Commands
 
+### DDEV environment commands
+
 * Start environment: `ddev start`
+* Stop environment: `ddev stop`
+* Restart environment: `ddev restart`
+* SSH into container: `ddev ssh`
+* View logs: `ddev logs`
+* Show project info: `ddev describe`
+
+
+### Drush (Drupal CLI)
+
 * Clear cache: `ddev drush cr`
+* Show site status: `ddev drush status`
+* Login as admin: `ddev drush uli`
 * Export config: `ddev drush cex`
 * Import config: `ddev drush cim`
-* Login as admin: `ddev drush uli`
+* Show config status: `ddev drush config:status`
+* Show config diff: `ddev drush config:diff`
+* Open SQL console: `ddev drush sql-cli`
+* Dump database: `ddev drush sql-dump`
+* Show logs: `ddev drush watchdog:show`
 
-## Git Best Practices
+### Composer (Dependency Management)
 
-* Do not commit `/vendor/` or `/web/core/`
-* Track `composer.json`, `composer.lock`, and config exports
-* Use feature branches for new development
+* Install packages: `composer install`
+* Update packages: `composer update`
+* Require a module: `composer require drupal/[module_name]`
+* Remove a module: `composer remove drupal/[module_name]`
+
 
 ## License
-
 This project is open source and publicly available. It uses [Drupal](https://www.drupal.org/about/licensing) (GPL-2.0-or-later) as its core framework. Contributed modules and themes follow their respective open source licenses. All custom code in this repository is licensed under the GNU General Public License v2.0 or later unless otherwise stated.
